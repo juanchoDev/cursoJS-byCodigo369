@@ -1,0 +1,130 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: rgb(90, 50, 230);
+  background: linear-gradient(47deg, rgb(90, 50, 230) 45%, rgb(255, 255, 255) 100%);
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.containerLight {
+  background: #E6CE32;
+  background: linear-gradient(47deg, #E6CE32 0%, rgb(255, 255, 255) 75%);
+}
+
+.calculator {
+  position: relative;
+  height: auto;
+  width: auto;
+  padding: 1em;
+  border-radius: 1em;
+  box-shadow: 0.5em 0.5em 5em #969696;
+  background-color: #fff;
+  /* DARK THEME */
+}
+.calculator #display {
+  color: #000;
+  margin: 0.5em 0;
+  height: 4em;
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+  font-size: 2em;
+  font-weight: bold;
+}
+.calculator #clear {
+  background-color: #E6730B;
+  color: white;
+}
+.calculator .btn-number {
+  background-color: rgba(230, 206, 50, 0.3137254902);
+  color: black;
+}
+.calculator .btn-operator {
+  background-color: #E54500;
+  color: white;
+}
+.calculator .btn-equal {
+  height: 6.5em;
+  background-color: #E6C232;
+  color: black;
+  border-radius: 3.25em;
+}
+.calculator.dark {
+  background-color: #000;
+}
+.calculator.dark #display {
+  color: #fff;
+}
+.calculator.dark #clear {
+  background-color: #051BE6;
+  color: #fff;
+}
+.calculator.dark .btn-number {
+  background-color: #00E6D9;
+  color: #000;
+  font-weight: 600;
+}
+.calculator.dark .btn-operator {
+  background-color: #5A32E6;
+}
+.calculator.dark .btn-equal {
+  background-color: #01A8E6;
+}
+.calculator.dark .theme-toggler::before {
+  background-color: #fff;
+}
+
+.theme-toggler {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1;
+}
+.theme-toggler::before {
+  position: absolute;
+  content: "";
+  height: 1.5em;
+  width: 1.5em;
+  top: 0.5em;
+  right: -1em;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: #E6CE32;
+  z-index: -1;
+}
+
+.theme-toggler .active {
+  color: #333;
+}
+.theme-toggler .active::before {
+  background-color: #fff;
+}
+
+button {
+  height: 3em;
+  width: 3em;
+  border: 0;
+  border-radius: 50%;
+  font-size: 1.25em;
+  margin: 0.25em;
+  cursor: pointer;
+  transition: all 0.5 ease;
+}
+button:hover {
+  transform: scale(1.1);
+}/*# sourceMappingURL=styles.css.map */
